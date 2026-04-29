@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUIC — IT Management Services</title>
+<link rel="stylesheet" href="guic-styles.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="nav" id="nav">
+  <img src="assets/logo-black.png" class="nav-logo" alt="GUIC" onclick="navigate('home')">
+  <ul class="nav-links">
+    <li><a onclick="navigate('home')" id="nav-home" class="active">Home</a></li>
+    <li><a onclick="navigate('services')" id="nav-services">Services</a></li>
+    <li><a onclick="navigate('blog')" id="nav-blog">Insights</a></li>
+    <li><a onclick="navigate('contact')" id="nav-contact">Contact</a></li>
+  </ul>
+  <div class="nav-spacer"></div>
+  <button class="nav-cta" onclick="navigate('contact')">Start a Conversation</button>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="navigate('home');closeMenu()">Home</a>
+  <a onclick="navigate('services');closeMenu()">Services</a>
+  <a onclick="navigate('blog');closeMenu()">Insights</a>
+  <a onclick="navigate('contact');closeMenu()">Contact</a>
+  <button class="mobile-cta" onclick="navigate('contact');closeMenu()">Start a Conversation</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- HOME                                                   -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="screen active" id="screen-home" data-screen-label="Home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-left">
+      <div class="hero-eyebrow">IT Management Services</div>
+      <h1 class="hero-title">We Run IT.<br>You Run the<br><em>Business.</em></h1>
+      <p class="hero-sub">Senior technology leadership, without the overhead. GUIC works alongside your team — bringing calm, experienced hands to your most important IT decisions and programmes.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="navigate('services')">
+          Explore Services <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+        </button>
+        <button class="btn-ghost-light" onclick="navigate('contact')">
+          Get in Touch
+        </button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-metrics">
+        <div class="metric-row">
+          <div>
+            <div class="metric-num">40<span style="color:var(--accent);font-size:24px">+</span></div>
+            <div class="metric-label">Enterprise clients served</div>
+          </div>
+          <i data-lucide="building-2" class="metric-icon" style="width:28px;height:28px"></i>
+        </div>
+        <div class="metric-row">
+          <div>
+            <div class="metric-num">12<span style="color:var(--accent);font-size:24px">+</span></div>
+            <div class="metric-label">Years of senior IT leadership</div>
+          </div>
+          <i data-lucide="layers" class="metric-icon" style="width:28px;height:28px"></i>
+        </div>
+        <div class="metric-row">
+          <div>
+            <div class="metric-num">98<span style="color:var(--accent);font-size:24px">%</span></div>
+            <div class="metric-label">On-time delivery rate</div>
+          </div>
+          <i data-lucide="check-circle" class="metric-icon" style="width:28px;height:28px"></i>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <i data-lucide="arrow-down" style="width:14px;height:14px;color:var(--gray-600)"></i>
+        Scroll to explore
+      </div>
+    </div>
+  </section>
+
+  <!-- Services teaser -->
+  <div style="max-width:1200px;margin:0 auto;padding:96px 64px">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">Four disciplines.<br>One point of accountability.</h2>
+    <p class="section-sub">From interim CIO to ERP rollout to e-commerce delivery — GUIC brings the calm, experienced leadership your IT agenda needs to move with confidence.</p>
+    <div class="services-grid">
+      <div class="service-card" onclick="navigate('services')">
+        <div class="service-card-num">01</div>
+        <div class="service-card-title">Head of IT / CIO</div>
+        <div class="service-card-body">Embedded senior IT leadership for organisations without a permanent CTO or IT Director. We act as your technology executive — board-level presence, strategic direction, and hands-on delivery ownership.</div>
+        <span class="service-card-link">Learn more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+      </div>
+      <div class="service-card" onclick="navigate('services')">
+        <div class="service-card-num">02</div>
+        <div class="service-card-title">Program &amp; Project Management</div>
+        <div class="service-card-body">End-to-end governance and delivery management for complex, multi-vendor IT programmes. We take accountability for outcomes across ERP, infrastructure, and digital transformation initiatives.</div>
+        <span class="service-card-link">Learn more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+      </div>
+      <div class="service-card" onclick="navigate('services')">
+        <div class="service-card-num">03</div>
+        <div class="service-card-title">ERP Implementation</div>
+        <div class="service-card-body">Full lifecycle ERP delivery — from vendor selection and requirements through go-live and hypercare. We manage the complexity so your business stays focused on adoption.</div>
+        <span class="service-card-link">Learn more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+      </div>
+      <div class="service-card" onclick="navigate('services')">
+        <div class="service-card-num">04</div>
+        <div class="service-card-title">E-Commerce</div>
+        <div class="service-card-body">Strategic IT leadership for digital commerce — platform selection, systems integration, performance at scale, and the technical governance to keep your online business running.</div>
+        <span class="service-card-link">Learn more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-cell">
+        <div class="stat-num">40<span>+</span></div>
+        <div class="stat-desc">Enterprise clients across financial services, retail, and manufacturing</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">98<span>%</span></div>
+        <div class="stat-desc">On-time and on-budget delivery across all major programmes</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">12<span>+</span></div>
+        <div class="stat-desc">Years of senior IT leadership and consulting experience</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3<span>x</span></div>
+        <div class="stat-desc">Typical ROI on IT investment when GUIC leads from day one</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote -->
+  <div class="quote-section">
+    <div class="quote-inner">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">GUIC gave us the IT leadership we needed at exactly the right moment. They didn't just manage the project — they owned it. That made all the difference.</p>
+      <div class="quote-attr">Chief Executive Officer — Financial Services Client</div>
+    </div>
+  </div>
+
+  <!-- Approach -->
+  <div class="section">
+    <div class="section-eyebrow">Our Approach</div>
+    <h2 class="section-title">How we work.</h2>
+    <div class="approach-grid">
+      <div class="approach-steps">
+        <div class="step active" onclick="setStep(this, 'Scoping &amp; Discovery', 'We begin with a structured workshop to understand your landscape, constraints, and objectives — before any engagement begins.')">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">Scoping &amp; Discovery</div>
+            <div class="step-body">We begin with a structured workshop to understand your landscape, constraints, and objectives before any engagement begins.</div>
+          </div>
+        </div>
+        <div class="step" onclick="setStep(this, 'Embed &amp; Align', 'Our consultant embeds within your team, establishes governance, and aligns stakeholders around a clear delivery plan.')">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">Embed &amp; Align</div>
+            <div class="step-body">Our consultant embeds within your team, establishes governance, and aligns stakeholders around a clear delivery plan.</div>
+          </div>
+        </div>
+        <div class="step" onclick="setStep(this, 'Deliver &amp; Govern', 'We drive delivery with rigorous programme governance — risk management, vendor oversight, and weekly executive reporting.')">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">Deliver &amp; Govern</div>
+            <div class="step-body">We drive delivery with rigorous programme governance — risk management, vendor oversight, and weekly executive reporting.</div>
+          </div>
+        </div>
+        <div class="step" onclick="setStep(this, 'Transition &amp; Sustain', 'We transition outcomes to your permanent team and leave behind the processes and documentation to sustain them.')">
+          <div class="step-num">04</div>
+          <div>
+            <div class="step-title">Transition &amp; Sustain</div>
+            <div class="step-body">We transition outcomes to your permanent team and leave behind the processes and documentation to sustain them.</div>
+          </div>
+        </div>
+      </div>
+      <div class="approach-visual" id="approach-visual">
+        <div class="approach-title-big" id="approach-big">Results,<br>not<br>reports.</div>
+        <div class="approach-sub" id="approach-sub">We take accountability for outcomes. Every engagement is structured around delivery — not effort or activity.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest insights teaser -->
+  <div style="background:var(--warm-100);border-top:1px solid var(--warm-border);border-bottom:1px solid var(--warm-border);padding:80px 64px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:16px;">
+        <div>
+          <div class="section-eyebrow">Insights</div>
+          <h2 class="section-title" style="margin-bottom:0">From the GUIC team.</h2>
+        </div>
+        <button class="btn-primary" style="background:var(--black)" onclick="navigate('blog')">
+          All Insights <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+        </button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--warm-border);border:1px solid var(--warm-border);border-radius:12px;overflow:hidden;">
+        <div class="blog-card" onclick="navigate('blog')">
+          <div class="blog-card-img photo-placeholder"></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Leadership</span>
+            <div class="blog-card-title">When Your IT Project Needs a Leader, Not a Manager</div>
+            <div class="blog-card-excerpt">The difference between project management and IT leadership isn't methodology — it's accountability. Here's what that looks like in practice.</div>
+            <div class="blog-card-meta">March 2026 · 5 min read</div>
+            <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+          </div>
+        </div>
+        <div class="blog-card" onclick="navigate('blog')">
+          <div class="blog-card-img photo-placeholder"></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">ERP</span>
+            <div class="blog-card-title">The 5 ERP Failure Patterns We See Over and Over</div>
+            <div class="blog-card-excerpt">After dozens of ERP implementations, the failure modes are predictable. What matters is whether your leadership can see them coming.</div>
+            <div class="blog-card-meta">February 2026 · 7 min read</div>
+            <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+          </div>
+        </div>
+        <div class="blog-card" onclick="navigate('blog')">
+          <div class="blog-card-img photo-placeholder"></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">E-Commerce</span>
+            <div class="blog-card-title">Platform Selection Is the Easy Part. Integration Is Where Projects Die.</div>
+            <div class="blog-card-excerpt">Choosing your e-commerce platform takes weeks. Getting it to talk to your ERP, WMS, and PIM correctly takes months — if you're unprepared.</div>
+            <div class="blog-card-meta">January 2026 · 6 min read</div>
+            <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="assets/logo-black.png" class="footer-logo" alt="GUIC">
+    <ul class="footer-links">
+      <li><a onclick="navigate('services')">Services</a></li>
+      <li><a onclick="navigate('blog')">Insights</a></li>
+      <li><a onclick="navigate('contact')">Contact</a></li>
+    </ul>
+    <div class="footer-legal">© 2026 GUIC. All rights reserved.</div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SERVICES                                               -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="screen" id="screen-services" data-screen-label="Services">
+  <div class="page">
+    <div style="background:var(--black);padding:80px 64px">
+      <div style="max-width:1200px;margin:0 auto">
+        <div class="section-eyebrow">Services</div>
+        <h1 style="font-family:var(--font-display);font-size:clamp(40px,5vw,68px);font-weight:900;letter-spacing:-0.03em;color:var(--white);line-height:1.0;max-width:700px;margin-bottom:20px">Four disciplines.<br>One point of accountability.</h1>
+        <p style="font-size:18px;color:var(--gray-400);max-width:580px;line-height:1.7">GUIC provides senior IT leadership at the point of need — experienced people who embed with your team and take genuine ownership of outcomes.</p>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto;padding:0 64px 96px">
+      <div class="services-detail-grid">
+
+        <!-- Head of IT / CIO -->
+        <div class="service-row">
+          <div>
+            <div class="service-row-tag">Leadership</div>
+            <div class="service-row-title">Head of IT / CIO</div>
+          </div>
+          <div class="service-row-body">We act as your technology executive — embedded, accountable, and senior enough to operate at board level. The right engagement for organisations navigating rapid growth, a major transformation, or a leadership gap. We own the IT agenda from strategy through delivery, and report directly to your CEO or board.</div>
+          <div class="service-row-deliverables">
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> IT strategy &amp; roadmap</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Board-level reporting</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Vendor governance</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Team leadership</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Budget ownership</div>
+          </div>
+        </div>
+
+        <!-- Program & Project Management -->
+        <div class="service-row">
+          <div>
+            <div class="service-row-tag">Governance</div>
+            <div class="service-row-title">Program &amp; Project Management</div>
+          </div>
+          <div class="service-row-body">Complex IT programmes require senior, experienced governance — not coordinators. We bring rigorous programme management discipline: steering committees, risk registers, dependency mapping, and supplier accountability. For single projects, we provide the same accountability with a tighter scope and faster setup.</div>
+          <div class="service-row-deliverables">
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Programme governance</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Risk management</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Supplier oversight</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Executive reporting</div>
+          </div>
+        </div>
+
+        <!-- ERP -->
+        <div class="service-row">
+          <div>
+            <div class="service-row-tag">ERP</div>
+            <div class="service-row-title">ERP Implementation</div>
+          </div>
+          <div class="service-row-body">ERP projects fail at the leadership and integration layer, not the technology layer. We manage the full delivery lifecycle — from requirements and vendor selection through data migration, go-live, and hypercare. We keep your business connected to the programme, manage change, and ensure the system actually gets adopted.</div>
+          <div class="service-row-deliverables">
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Vendor selection</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Requirements management</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Data migration oversight</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Go-live &amp; hypercare</div>
+          </div>
+        </div>
+
+        <!-- E-Commerce -->
+        <div class="service-row">
+          <div>
+            <div class="service-row-tag">E-Commerce</div>
+            <div class="service-row-title">E-Commerce</div>
+          </div>
+          <div class="service-row-body">Digital commerce is as much a systems integration challenge as it is a technology choice. GUIC provides strategic IT leadership for e-commerce programmes — platform selection, integration architecture (ERP, PIM, WMS), performance governance, and the technical leadership to keep your online business operating at scale.</div>
+          <div class="service-row-deliverables">
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Platform selection</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Systems integration</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Performance governance</div>
+            <div class="deliverable"><i data-lucide="check" style="width:14px;height:14px;color:var(--accent)"></i> Launch &amp; scale support</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <div class="cta-strip-inner">
+        <div>
+          <div class="cta-strip-title">Not sure which service fits?</div>
+          <div class="cta-strip-sub">Start with a conversation. We'll scope the right engagement together.</div>
+        </div>
+        <button class="btn-white" onclick="navigate('contact')">
+          Start a Conversation <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <img src="assets/logo-black.png" class="footer-logo" alt="GUIC">
+      <ul class="footer-links">
+        <li><a onclick="navigate('services')">Services</a></li>
+        <li><a onclick="navigate('blog')">Insights</a></li>
+        <li><a onclick="navigate('contact')">Contact</a></li>
+      </ul>
+      <div class="footer-legal">© 2026 GUIC. All rights reserved.</div>
+    </footer>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- BLOG / INSIGHTS                                        -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="screen" id="screen-blog" data-screen-label="Insights">
+  <div class="page">
+    <div style="background:var(--black);padding:80px 64px">
+      <div style="max-width:1200px;margin:0 auto;">
+        <div class="section-eyebrow">Insights</div>
+        <h1 style="font-family:var(--font-display);font-size:clamp(40px,5vw,68px);font-weight:900;letter-spacing:-0.03em;color:var(--white);line-height:1.0;max-width:700px;margin-bottom:20px">Straight talk on IT leadership.</h1>
+        <p style="font-size:18px;color:var(--gray-400);max-width:560px;line-height:1.7">Practical perspectives from the coalface — programme delivery, IT governance, and the decisions that separate successful projects from failed ones.</p>
+      </div>
+    </div>
+
+    <div style="max-width:1200px;margin:0 auto;padding:64px 64px 96px;">
+
+      <!-- Filter tabs -->
+      <div style="display:flex;gap:8px;margin-bottom:48px;flex-wrap:wrap;" id="blog-filters">
+        <button class="blog-filter active" onclick="filterBlog('all', this)">All</button>
+        <button class="blog-filter" onclick="filterBlog('Leadership', this)">Leadership</button>
+        <button class="blog-filter" onclick="filterBlog('ERP', this)">ERP</button>
+        <button class="blog-filter" onclick="filterBlog('E-Commerce', this)">E-Commerce</button>
+        <button class="blog-filter" onclick="filterBlog('Governance', this)">Governance</button>
+      </div>
+
+      <!-- Featured post -->
+      <div class="blog-featured" data-tags="Leadership">
+        <div class="blog-featured-img photo-placeholder"></div>
+        <div class="blog-featured-body">
+          <span class="blog-tag">Leadership</span>
+          <div class="blog-featured-title">When Your IT Project Needs a Leader, Not a Manager</div>
+          <div class="blog-featured-excerpt">The difference between project management and IT leadership isn't methodology — it's accountability. A programme manager tracks the plan. An IT leader owns the outcome. Here's what that distinction looks like in practice, and why it determines whether your project succeeds.</div>
+          <div class="blog-meta" style="margin-bottom:20px">March 2026 · 5 min read</div>
+          <button class="btn-primary" style="background:var(--black)">
+            Read Article <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Blog grid -->
+      <div style="margin-top:2px">
+        <div class="blog-grid" id="blog-grid">
+
+          <div class="blog-card" data-tags="ERP">
+            <div class="blog-card-img photo-placeholder"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">ERP</span>
+              <div class="blog-card-title">The 5 ERP Failure Patterns We See Over and Over</div>
+              <div class="blog-card-excerpt">After dozens of ERP implementations, the failure modes are predictable. What matters is whether your leadership can see them coming in time to act.</div>
+              <div class="blog-card-meta">February 2026 · 7 min read</div>
+              <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+            </div>
+          </div>
+
+          <div class="blog-card" data-tags="E-Commerce">
+            <div class="blog-card-img photo-placeholder"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">E-Commerce</span>
+              <div class="blog-card-title">Platform Selection Is the Easy Part. Integration Is Where Projects Die.</div>
+              <div class="blog-card-excerpt">Choosing your e-commerce platform takes weeks. Getting it to talk to your ERP, WMS, and PIM takes months — if you're unprepared for the complexity.</div>
+              <div class="blog-card-meta">January 2026 · 6 min read</div>
+              <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+            </div>
+          </div>
+
+          <div class="blog-card" data-tags="Governance">
+            <div class="blog-card-img photo-placeholder"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Governance</span>
+              <div class="blog-card-title">What a Steering Committee Should Actually Do</div>
+              <div class="blog-card-excerpt">Most steering committees receive information. Few of them make decisions. The ones that work — and keep projects on track — do something fundamentally different.</div>
+              <div class="blog-card-meta">December 2025 · 5 min read</div>
+              <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+            </div>
+          </div>
+
+          <div class="blog-card" data-tags="Leadership">
+            <div class="blog-card-img photo-placeholder"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Leadership</span>
+              <div class="blog-card-title">The Interim CIO Playbook: First 30 Days</div>
+              <div class="blog-card-excerpt">When GUIC embeds as Head of IT, the first month is decisive. Here's exactly how we structure it — stakeholder mapping, quick wins, and where the real risks usually hide.</div>
+              <div class="blog-card-meta">November 2025 · 8 min read</div>
+              <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+            </div>
+          </div>
+
+          <div class="blog-card" data-tags="ERP">
+            <div class="blog-card-img photo-placeholder"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">ERP</span>
+              <div class="blog-card-title">Data Migration Is Not a Technical Problem</div>
+              <div class="blog-card-excerpt">Every ERP project has a data migration workstream. Most underestimate it. The reason it fails is almost never the tooling — it's ownership, quality, and decision-making.</div>
+              <div class="blog-card-meta">October 2025 · 6 min read</div>
+              <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+            </div>
+          </div>
+
+          <div class="blog-card" data-tags="E-Commerce">
+            <div class="blog-card-img photo-placeholder"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">E-Commerce</span>
+              <div class="blog-card-title">Scaling E-Commerce: When Your Tech Stack Becomes Your Bottleneck</div>
+              <div class="blog-card-excerpt">At a certain volume, the platform choices made at launch start to constrain your growth. Recognising the signals early — and acting before it's urgent — is what separates the leaders.</div>
+              <div class="blog-card-meta">September 2025 · 5 min read</div>
+              <span class="blog-read-more">Read more <i data-lucide="arrow-right" style="width:13px;height:13px"></i></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <div class="cta-strip-inner">
+        <div>
+          <div class="cta-strip-title">A challenge you're navigating?</div>
+          <div class="cta-strip-sub">Let's talk through it. No pitch, just a straight conversation.</div>
+        </div>
+        <button class="btn-white" onclick="navigate('contact')">
+          Start a Conversation <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <img src="assets/logo-black.png" class="footer-logo" alt="GUIC">
+      <ul class="footer-links">
+        <li><a onclick="navigate('services')">Services</a></li>
+        <li><a onclick="navigate('blog')">Insights</a></li>
+        <li><a onclick="navigate('contact')">Contact</a></li>
+      </ul>
+      <div class="footer-legal">© 2026 GUIC. All rights reserved.</div>
+    </footer>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- CONTACT                                                -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="screen" id="screen-contact" data-screen-label="Contact">
+  <div class="page">
+    <div style="background:var(--black);padding:80px 64px">
+      <div style="max-width:1200px;margin:0 auto">
+        <div class="section-eyebrow">Contact</div>
+        <h1 style="font-family:var(--font-display);font-size:clamp(40px,5vw,68px);font-weight:900;letter-spacing:-0.03em;color:var(--white);line-height:1.0;max-width:640px;margin-bottom:20px">Start a conversation.</h1>
+        <p style="font-size:18px;color:var(--gray-400);max-width:520px;line-height:1.7">All enquiries are responded to within one business day. If your need is urgent, note it in your message.</p>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto;padding:80px 64px 96px;">
+      <div class="contact-layout">
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-grid">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" placeholder="Jan">
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" placeholder="Lindqvist">
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" placeholder="jan@company.com">
+            </div>
+            <div class="field">
+              <label>Company</label>
+              <input type="text" placeholder="Your Organisation">
+            </div>
+            <div class="field full">
+              <label>Service of Interest</label>
+              <select>
+                <option value="">Select a service…</option>
+                <option>Head of IT / CIO</option>
+                <option>Program Management</option>
+                <option>Project Management</option>
+                <option>ERP Implementation</option>
+                <option>E-Commerce</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label>Tell Us About Your Challenge</label>
+              <textarea placeholder="Describe your situation, timeline, and any constraints…"></textarea>
+            </div>
+            <div class="full">
+              <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px">
+                Send Enquiry <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div>
+          <div class="section-eyebrow" style="margin-bottom:24px">Direct Contact</div>
+          <p style="font-size:15px;color:var(--gray-600);line-height:1.7;margin-bottom:32px">You'll hear from a senior, experienced professional — not a sales intermediary. We keep it simple and direct.</p>
+          <div class="info-item">
+            <i data-lucide="mail" class="info-icon" style="width:18px;height:18px"></i>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value">contact@guic.se</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <i data-lucide="map-pin" class="info-icon" style="width:18px;height:18px"></i>
+            <div>
+              <div class="info-label">Location</div>
+              <div class="info-value">Sweden &amp; Northern Europe</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <i data-lucide="clock" class="info-icon" style="width:18px;height:18px"></i>
+            <div>
+              <div class="info-label">Response Time</div>
+              <div class="info-value">Within one business day</div>
+            </div>
+          </div>
+          <div style="margin-top:32px;padding:28px;background:var(--warm-100);border:1px solid var(--warm-border);border-radius:10px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--gray-500);margin-bottom:16px">Typical First Steps</div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--gray-700)"><span style="color:var(--accent);font-weight:800;font-family:var(--font-display);min-width:24px">01</span> 30-minute introductory call</div>
+              <div style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--gray-700)"><span style="color:var(--accent);font-weight:800;font-family:var(--font-display);min-width:24px">02</span> Scoping workshop (half-day, on-site or remote)</div>
+              <div style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--gray-700)"><span style="color:var(--accent);font-weight:800;font-family:var(--font-display);min-width:24px">03</span> Fixed-scope proposal within 5 business days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <img src="assets/logo-black.png" class="footer-logo" alt="GUIC">
+      <ul class="footer-links">
+        <li><a onclick="navigate('services')">Services</a></li>
+        <li><a onclick="navigate('blog')">Insights</a></li>
+        <li><a onclick="navigate('contact')">Contact</a></li>
+      </ul>
+      <div class="footer-legal">© 2026 GUIC. All rights reserved.</div>
+    </footer>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--accent)"></i>
+  Enquiry sent. We'll be in touch within one business day.
+</div>
+
+<style>
+/* Blog filters — inline to avoid extra file */
+.blog-filter {
+  font-family: var(--font-body); font-size: 13px; font-weight: 600;
+  padding: 8px 18px; border-radius: 20px; border: 1.5px solid var(--warm-border);
+  background: var(--white); color: var(--gray-600); cursor: pointer;
+  transition: all 150ms;
+}
+.blog-filter:hover { border-color: var(--gray-700); color: var(--black); background: var(--warm-100); }
+.blog-filter.active { background: var(--black); color: var(--white); border-color: var(--black); }
+
+/* Responsive blog grid */
+@media (max-width: 900px) {
+  #blog-grid { grid-template-columns: 1fr !important; }
+  .blog-featured { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<script>
+// ── Navigation ──
+function navigate(screen) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('screen-' + screen).classList.add('active');
+  const navEl = document.getElementById('nav-' + screen);
+  if (navEl) navEl.classList.add('active');
+  window.scrollTo({ top: 0 });
+  try { localStorage.setItem('guic-screen', screen); } catch(e) {}
+  lucide.createIcons();
+}
+
+// ── Mobile menu ──
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+}
+
+// ── Approach steps ──
+function setStep(el, title, desc) {
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ── Blog filters ──
+function filterBlog(tag, btn) {
+  document.querySelectorAll('.blog-filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('#blog-grid .blog-card');
+  const featured = document.querySelector('.blog-featured');
+  cards.forEach(card => {
+    if (tag === 'all' || card.dataset.tags === tag) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  if (featured) {
+    featured.style.display = (tag === 'all' || featured.dataset.tags === tag) ? '' : 'none';
+  }
+}
+
+// ── Contact submit ──
+function handleSubmit(e) {
+  e.preventDefault();
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  lucide.createIcons();
+  setTimeout(() => { toast.classList.remove('show'); }, 4000);
+}
+
+// ── Nav scroll shadow ──
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// ── Restore last screen ──
+try {
+  const saved = localStorage.getItem('guic-screen');
+  if (saved && document.getElementById('screen-' + saved)) navigate(saved);
+} catch(e) {}
+
+// ── Init icons ──
+document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
+lucide.createIcons();
+
+// ── Fade-in on scroll ──
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── Hero canvas animation ──
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const ACCENT = [0, 87, 255];
+  const NODE_COUNT = 60;
+  const CONNECT_DIST = 180;
+  const SPEED = 0.28;
+  let nodes = [], W, H, raf;
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    W = canvas.width  = rect.width  || window.innerWidth;
+    H = canvas.height = rect.height || window.innerHeight;
+  }
+
+  function mkNode() {
+    return {
+      x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random() - 0.5) * SPEED, vy: (Math.random() - 0.5) * SPEED,
+      r: Math.random() * 1.5 + 1, pulse: Math.random() * Math.PI * 2
+    };
+  }
+
+  function init() { resize(); nodes = Array.from({length: NODE_COUNT}, mkNode); }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const grd = ctx.createRadialGradient(W * 0.28, H * 0.5, 0, W * 0.28, H * 0.5, W * 0.55);
+    grd.addColorStop(0, 'rgba(0,57,255,0.10)'); grd.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grd; ctx.fillRect(0, 0, W, H);
+    const grd2 = ctx.createRadialGradient(W * 0.82, H * 0.18, 0, W * 0.82, H * 0.18, W * 0.35);
+    grd2.addColorStop(0, 'rgba(0,80,255,0.07)'); grd2.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grd2; ctx.fillRect(0, 0, W, H);
+
+    nodes.forEach(n => {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > W) n.vx *= -1;
+      if (n.y < 0 || n.y > H) n.vy *= -1;
+      n.pulse += 0.012;
+    });
+
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < CONNECT_DIST) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(${ACCENT[0]},${ACCENT[1]},${ACCENT[2]},${(1 - dist / CONNECT_DIST) * 0.3})`;
+          ctx.lineWidth = 0.8;
+          ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+    }
+
+    nodes.forEach(n => {
+      const pulse = 0.6 + 0.4 * Math.sin(n.pulse);
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${ACCENT[0]},${ACCENT[1]},${ACCENT[2]},${pulse * 0.7})`; ctx.fill();
+      if (n.r > 2) {
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r * 3, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${ACCENT[0]},${ACCENT[1]},${ACCENT[2]},${pulse * 0.06})`; ctx.fill();
+      }
+    });
+    raf = requestAnimationFrame(draw);
+  }
+
+  function start() { if (raf) cancelAnimationFrame(raf); init(); raf = requestAnimationFrame(draw); }
+  window.addEventListener('resize', start);
+  start();
+})();
+</script>
+</body>
+</html>
